@@ -1,0 +1,13 @@
+{
+  "name": "form4.node.intercepting-http-proxy",
+  "version": "0.0.0",
+  "description": "An intercepting http proxy for development purposes only",
+  "main": "intercepting-http-proxy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md"
+}
