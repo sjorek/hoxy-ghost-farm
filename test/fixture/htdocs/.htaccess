@@ -1,0 +1,7 @@
+AuthType Digest
+AuthName "DGB Mobil"
+
+AuthDigestProvider file
+AuthUserFile /Users/sjorek/Documents/Projects/form4/Sites/dgb/web/.htpasswd
+Require valid-user
+
