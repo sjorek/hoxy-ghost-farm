@@ -1,12 +1,12 @@
 {
   "name": "form4.node.hoxy-ghost-farm",
   "version": "0.0.0",
-  "description": "An hoxy plugin for development purposes only",
-  "main": "hoxy.js",
+  "description": "An hoxy-wrapper & -plugin for development purposes only",
+  "main": "ghost-farm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "https://github.com/sjorek/hoxy",
+  "repository": "https://github.com/sjorek/hoxy-ghost-farm.git",
   "author": "Stephan Jorek <stephan.jorek@gmail.com>",
   "license": "BSD",
   "readmeFilename": "README.md",
