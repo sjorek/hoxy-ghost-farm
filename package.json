@@ -1,13 +1,19 @@
 {
-  "name": "form4.node.intercepting-http-proxy",
+  "name": "form4.node.hoxy-ghost-farm",
   "version": "0.0.0",
-  "description": "An intercepting http proxy for development purposes only",
-  "main": "intercepting-http-proxy.js",
+  "description": "An hoxy plugin for development purposes only",
+  "main": "hoxy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "",
-  "author": "",
+  "repository": "https://github.com/sjorek/hoxy",
+  "author": "Stephan Jorek <stephan.jorek@gmail.com>",
   "license": "BSD",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "dependencies" : {
+    "hoxy": "0.2.x"
+  },
+  "engines": {
+    "node": ">=0.8"
+  }
 }
