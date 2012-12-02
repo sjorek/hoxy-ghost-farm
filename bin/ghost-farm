@@ -1,3 +1,9 @@
-#!/usr/bin/env node
+#!/bin/sh
 
-require('../ghost-farm');
+BASE=$(cd `dirname $0`/.. ; pwd )
+DEBUG=
+if [ "$1" == "--debug" ] ; then
+	DEBUG=--debug
+fi
+
+NODE_PATH=${BASE}:${BASE}/node_modules:${BASE}/node_modules/hoxy/node_modules /usr/bin/env node ${DEBUG} ${BASE}/ghost-farm.js $@

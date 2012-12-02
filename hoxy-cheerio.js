@@ -1,3 +1,3 @@
 
-$('base').attr('href','http://localhost:8080/');
+// $('base').attr('href','http://www.dgb.de.eve:8080/');
 
