@@ -1,5 +1,5 @@
 {
-  "name": "form4.node.hoxy-ghost-farm",
+  "name": "hoxy-ghost-farm",
   "version": "0.0.0",
   "description": "An hoxy-wrapper & -plugin for development purposes only",
   "main": "ghost-farm.js",
