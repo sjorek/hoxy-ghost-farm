@@ -2,8 +2,12 @@
 # UNCOMMENT TO ACTIVATE. SEE readme.markdown IN THIS DIR FOR SYNTAX HELP.
 
 # add a visible banner alerting user of proxy
-response: if $content-type contains 'html', @banner("currently browsing through a web proxy")
-response: if $content-type contains 'html', @cheerio-script("hoxy-cheerio.js")
+response: if $content-type contains 'html', @banner("currently browsing through a web proxy", "position:fixed", 1)
+response: if $content-type contains 'html', @cheerio-script("hoxy-cheerio.js", 1, 1)
+response: if $content-type contains 'html', $response-body.replace(/<!DOCTYPE[^>]*>/, '<!DOCTYPE html>')
+response: if $content-type contains 'html', $response-body.replace(/\s*<!--([^-]|-[^-])*-->\s*/g, '')
+response: if $content-type contains 'html', $response-body.replace(/\n\s*\n\s*/g, '\n\n')
+response: if $content-type contains 'html', $response-body.replace(/(([ ]|>|&[a-z]+;)\s+|\s+([ ]|<|&[a-z]+;)|(>)\s+(<))/gi, '$2$3')
 response: if $content-type contains 'html', $response-body.replace(/(http:\/\/(|www\.|en\.)dgb\.de)(:\d+)?/g, '$1.eve:8080')
 
 #response: if $content-type contains 'html', @html-beautify()
@@ -15,7 +19,7 @@ response: if $content-type contains 'html', $response-body.replace(/(http:\/\/(|
 response: if $status among [301,302,303,307,308] and $response-headers['location'] contains 'dgb.de', $status.log $response-headers['location'].replace(/^(https?:\/\/(|www\.|en\.)dgb\.de)([^\/]*(\/|$))/g, '$1.eve:8080$4')
 
 # log every request to given hosts
-response: if $hostname contains 'dgb.de', $url.log
+#response: if $hostname contains 'dgb.de', $url.log
 
 # use css and js from the staging server
 #request: if $ext eq "js" and $host eq "www.example.com", $host.set-to('www-stage.example.com:83')
