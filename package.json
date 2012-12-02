@@ -1,7 +1,7 @@
 {
   "name": "hoxy-ghost-farm",
   "version": "0.0.0",
-  "description": "An hoxy-wrapper & -plugin for development purposes only",
+  "description": "A hoxy-wrapper & -plugin for development purposes only",
   "main": "ghost-farm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
