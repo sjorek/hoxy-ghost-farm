@@ -6,10 +6,10 @@ response: if $content-type contains 'html', @banner("currently browsing through 
 response: if $content-type contains 'html', @cheerio-script("hoxy-cheerio.js")
 response: if $content-type contains 'html', $response-body.replace(/http:\/\/www\.dgb\.de/g,'http://localhost:8080')
 
-response: if $content-type contains 'html', @html-beautify()
-response: if $content-type contains 'css', @css-beautify()
-response: if $content-type contains 'json', @json-beautify()
-response: if $content-type contains 'javascript', @js-beautify()
+#response: if $content-type contains 'html', @html-beautify()
+#response: if $content-type contains 'css', @css-beautify()
+#response: if $content-type contains 'json', @json-beautify()
+#response: if $content-type contains 'javascript', @js-beautify()
 
 # log every request to a given host
 response: if $hostname eq 'www.dgb.de', $url.log()
